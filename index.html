@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A little care, every day. Name your pixel puppy and look after it through eight small choices.">
+  <title>Puppy Day — A little care, every day</title>
+  <link rel="icon" href="assets/paw.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<main>
+  <header>
+    <span class="tag">A LITTLE CARE, EVERY DAY</span>
+    <h1>PUPPY DAY</h1>
+    <p>A small friend. A whole day of little moments.</p>
+  </header>
+  <noscript><p class="panel error">Please enable JavaScript to meet your puppy and play.</p></noscript>
+  <section id="welcome" class="panel">
+    <h2>Meet your new best friend.</h2>
+    <p>You have 8 chances to care for your puppy, from 09:00 to 17:00. Each completed action moves the day forward by one hour. There is no countdown — take your time.</p>
+    <form id="name-form" novalidate>
+      <label for="puppy-name">Your puppy's name <span class="field-note">(1–12 characters)</span></label>
+      <div class="form-row"><input id="puppy-name" maxlength="12" autocomplete="off" placeholder="e.g. Biscuit" aria-describedby="name-error"><button type="submit">Start our day <span aria-hidden="true">→</span></button></div>
+      <p id="name-error" class="error" role="alert"></p>
+    </form>
+    <p class="welcome-note">Feed. Play. Clean. Rest. Every choice gets a little reaction.</p>
+  </section>
+  <section id="game" hidden>
+    <div class="dayline"><h2 id="dog-title"></h2><span id="clock"></span></div>
+    <div class="layout">
+      <section id="scene" class="scene panel" aria-label="Your puppy's pixel garden" data-action="idle">
+        <span class="sun" aria-hidden="true"></span><span class="cloud" aria-hidden="true"></span><span class="tree" aria-hidden="true"></span>
+        <div class="scene-caption">HOME SWEET HOME</div>
+        <canvas id="dog" width="128" height="96" role="img" aria-label="A brown pixel puppy waiting for care"></canvas>
+        <span class="flower f1" aria-hidden="true"></span><span class="flower f2" aria-hidden="true"></span>
+        <div id="mood" class="bubble"></div>
+        <p id="scene-status" role="status" aria-live="polite">Ready for a little care.</p>
+      </section>
+      <section class="panel care">
+        <h2>Make today a good day.</h2>
+        <div id="stats"></div>
+        <p class="hint">Keep an eye on all four needs. Play takes at least 20 Energy.</p>
+        <div id="actions" class="actions">
+          <button type="button" data-action="feed"><span class="action-heading"><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h20v3h-2v4H4v-4H2zm4 3v2h12v-2zM5 6h4v4H5zm6-2h4v4h-4zm6 4h3v3h-3z" fill-rule="evenodd"/></svg><span>Feed</span></span><small>Fullness +30<br>Cleanliness −5</small></button>
+          <button type="button" data-action="play"><span class="action-heading"><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2h8v2h4v4h2v8h-2v4h-4v2H8v-2H4v-4H2V8h2V4h4zm0 4H6v4H4v4h2v4h4v2h4v-2h4v-4h2v-4h-2V6h-4V4h-4v2zm2 4h4v4h-4z" fill-rule="evenodd"/></svg><span>Play</span></span><small>Mood +25<br>Energy −20</small></button>
+          <button type="button" data-action="clean"><span class="action-heading"><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16v2h2v6h-2v2H4v-2H2v-6h2zm2 3v4h12v-4zM6 3h4v4H6zm8 3h4v4h-4zm5-5h3v3h-3z" fill-rule="evenodd"/></svg><span>Clean</span></span><small>Cleanliness +35<br>Energy −10</small></button>
+          <button type="button" data-action="rest"><span class="action-heading"><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h5v3h-3v3H9v7h3v3h7v-2h3v5h-5v2H9v-2H5v-4H3V9h2V5h4zM17 3h6v2h-2v2h-2v1h4v2h-7V8h2V6h2V5h-3z"/></svg><span>Rest</span></span><small>Energy +35<br>Mood +5</small></button>
+        </div>
+        <p class="hint rules-note">Each hour also uses 8 Fullness, 4 Mood and 3 Cleanliness. All needs stay between 0 and 100.</p>
+      </section>
+    </div>
+    <section class="panel journal"><h2>Dear puppy diary...</h2><p id="feedback" role="status" aria-live="polite" aria-atomic="true"></p><ol id="log"></ol></section>
+    <section id="summary" class="panel" hidden><h2>A day well spent.</h2><p id="result"></p><p>There is no single perfect routine. Which needs guided your choices today?</p></section>
+    <div class="reset-row"><button type="button" id="reset" class="secondary">Start over</button><span>Refreshing starts a new day. Progress is not saved.</span></div>
+  </section>
+  <footer>Made of pixels, powered by a little patience.<br><span>8 little choices. One happy companion.</span></footer>
+</main>
+<dialog id="reset-dialog" aria-labelledby="reset-title">
+  <h2 id="reset-title">Start a new day?</h2><p>This will clear your puppy's name and today's diary.</p>
+  <div class="dialog-actions"><button type="button" id="cancel-reset" class="secondary">Keep playing</button><button type="button" id="confirm-reset">Yes, start over</button></div>
+</dialog>
+</body>
+</html>
