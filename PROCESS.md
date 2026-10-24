@@ -56,4 +56,6 @@ The student's own explanation of the actual code: **to be added**.
 
 ## Publication and development history
 
-The supplied ZIP contained no Git history. This repository begins with an import of the reviewed local revision on 24 October 2026. Upload commits record the actual addition of source, fonts, screenshots and tests; they do not recreate earlier development or claim a human trial. Record further real changes and trial improvements as they happen. A hosted live site and Canvas submission are separate from publishing the repository and are not claimed here.
+The supplied ZIP contained no Git history. This repository begins with an import of the reviewed local revision on 24 October 2026. Upload commits record the actual addition of source, fonts, screenshots and tests; they do not recreate earlier development or claim a human trial. Record further real changes and trial improvements as they happen.
+
+GitHub Pages was enabled on 24 October 2026 to give visitors a direct playable entry point. The README now opens with a Play online link, since browsing an HTML file in the source repository does not launch the game. The public live page was opened without a GitHub login and its name-entry and feeding flow were checked. This is a deployment check, not the required independent user trial. Canvas submission remains the student's responsibility.

@@ -42,4 +42,13 @@ Game-state screenshots were reviewed separately. The speech bubble was moved clo
 - Reduced-motion and tab-visibility branches passed simulated-clock tests; the operating-system preference and physical assistive technology were not tested.
 - No physical phone/tablet, Safari or Firefox testing was performed.
 - Direct `file://` opening was unavailable in the controlled browser, so browser verification used a local HTTP server. Local opening is the intended convenience path; use the documented server command if a browser restricts it.
-- No independent human trial, hosted live-site deployment or Canvas submission is included in these development checks. Repository publication and public-access verification happen after this local verification record. Record a real trial in `PROCESS.md` before submission.
+- No independent human trial or Canvas submission is included in these checks. Record a real trial in `PROCESS.md` before submission.
+
+## Public repository and online deployment — passed
+
+Verified on 24 October 2026 after the local checks above:
+
+- The public repository was accessible while signed out. All 16 uploaded files matched the delivery files by Git blob hash. A fresh clone passed the same 9 Node tests.
+- GitHub Pages serves the root of `main` at https://sherryli919.github.io/puppy-day/.
+- The live page opened without a GitHub account. Entering Biscuit and selecting Start our day started the game. Feed showed the food bowl and eating reaction, advanced to 10:00 and 1/8 actions, and produced the expected values **82/56/70/57**.
+- The online screenshot showed the pixel font and action icons. No browser console warnings or errors were observed during this smoke test. This does not claim another complete regression run or a human trial.
