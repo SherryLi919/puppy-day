@@ -1,5 +1,15 @@
 # Revision: pixel type, English UI and visible puppy reactions
 
+## 29 October 2026 — AI-simulated usability feedback
+
+- Added clearly labelled AI feedback with separate browser evidence and design decisions.
+- Clarified that button values precede the hourly costs; the diary reports final changes.
+- Kept newest-first diary order and reversed its numbering to match actual action order.
+- Added an AI-assisted input-to-response code explanation for the student to verify.
+- Separated intended scope limitations from the real user trial and personal submission work still pending.
+
+## 24 October 2026 — original visual and interaction revision
+
 Date: 24 October 2026.
 
 - Added local Pixelify Sans and its OFL license.

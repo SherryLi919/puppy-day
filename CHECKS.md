@@ -52,3 +52,12 @@ Verified on 24 October 2026 after the local checks above:
 - GitHub Pages serves the root of `main` at https://sherryli919.github.io/puppy-day/.
 - The live page opened without a GitHub account. Entering Biscuit and selecting Start our day started the game. Feed showed the food bowl and eating reaction, advanced to 10:00 and 1/8 actions, and produced the expected values **82/56/70/57**.
 - The online screenshot showed the pixel font and action icons. No browser console warnings or errors were observed during this smoke test. This does not claim another complete regression run or a human trial.
+
+## AI simulation and feedback revision — 29 October 2026
+
+- An independent Grok review read supplied source and a screenshot. It had no browser tools. Its hypothetical usability concerns and the coordinator's decisions are recorded in `AI_FEEDBACK.md`.
+- The coordinating AI agent operated the live GitHub Pages game: blank-name error/focus, starting Mochi, rapid double Feed (one action), second accepted Feed, third refused Feed with no extra time, cancel and confirm reset, and refresh returning to welcome.
+- A fresh Feed/Play/Clean/Rest sequence repeated twice finished at 17:00 with eight diary entries, needs 56/88/80/97 and an 80/100 average. The care buttons stayed disabled after the final reaction. No browser warnings or errors were observed.
+- From the freshly synchronized source, `node --check script.js` and all **9 Node tests passed**. This revision does not change JavaScript or game rules.
+- After the two HTML changes, localhost browser checks confirmed the explanatory cost sentence and diary numbering **2, 1** after Feed and Play; the 11:00 values were 74/77/50/54. A third Clean produced numbering 3, 2, 1. Desktop and 390px screenshots were inspected; the narrow layout had a 390px content width and 390px scroll width, with no horizontal overflow. No console warnings or errors were observed.
+- These are AI-agent browser checks and a separate AI review. No real participant was observed. Existing limitations above still apply.

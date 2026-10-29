@@ -2,7 +2,7 @@
 
 ## Record status
 
-Revision date: 24 October 2026. This record describes the supplied prototype and the changes made with AI assistance in this editing session. The student's own contributions and reflection remain to be added in their own words. A real user trial has **not** been carried out in this session.
+Latest revision: 29 October 2026. The original revision was made on 24 October. This record describes the supplied prototype, the changes made with AI assistance, and a later AI-simulated usability review. The student's own contributions and reflection remain to be added in their own words. A real user trial has **not** been carried out in these sessions.
 
 ## Starting idea
 
@@ -37,6 +37,8 @@ This is project-owner feedback. It is not a substitute for the assignment's tria
 
 ## Real user trial — still pending
 
+The separate [AI simulation and feedback](AI_FEEDBACK.md) is complete. It is kept separate from the real trial below.
+
 Use the tasks in `TESTING.md`. Ask at least one other person to try the game before explaining how it works.
 
 - Date, device and browser: **to be recorded**.
@@ -52,7 +54,21 @@ Do not turn these prompts into invented observations. Automated development chec
 
 Trace the Feed button's `data-action` through the click handler and `act`. Check its refusal condition, apply the feeding effect and hourly costs once, append the diary entry, and start the food-bowl reaction. Explain how the transient reaction state differs from the pet's lasting need values.
 
-The student's own explanation of the actual code: **to be added**.
+### AI-assisted explanation to verify and put into your own words
+
+The buttons carry a `data-action` value such as `feed`. The action-group click handler finds the clicked button and calls `act(button.dataset.action)` only when the button is enabled. `act` first rejects an ongoing reaction, a completed day, or an unsuitable choice such as Feed when Fullness is above 85. A refusal updates the feedback text and returns before the hour or history changes.
+
+For an accepted Feed, `effects.feed` adds 30 Fullness and subtracts 5 Cleanliness. The shared hourly cost then subtracts 8 Fullness, 4 Mood and 3 Cleanliness, after which values are limited to 0–100. From the initial values, the result is 82/56/70/57. The hour advances once and the actual differences are written to the diary. `beginReaction('feed')` creates temporary reaction state; `drawDog` uses it to draw the bowl, food and eating pose. When the reaction ends, the props disappear and the buttons unlock, but the needs and diary remain. Confirmed reset cancels the reaction before restoring the starting state.
+
+This explanation was prepared with AI. The student should check it against `script.js` and be able to explain the connection independently; it is not a claim about what the student has already learned or contributed.
+
+## AI-simulated review and iteration — 29 October 2026
+
+An independent Grok 4.7 review through Magpie examined the supplied source and screenshot as a hypothetical first-time player. It did not operate a browser or observe a participant. The coordinating Codex session separately tested the public game, including an empty name, rapid repeat input, a refused third Feed, reset/cancel, eight-action completion and refresh. Details and limits are in `AI_FEEDBACK.md` and `CHECKS.md`.
+
+Two suggestions were kept: clarify that button values precede hourly costs, and reverse the diary numbering so the latest action's number matches its order in the day. Both are small feedback improvements; the numerical care rules remain unchanged. The suggestion to add every refusal threshold to every control was not adopted: the current refusal explains the reason without spending time, and extra text would increase the reading load. The short animation lock was retained because it prevents rapid clicks from using several turns. A real trial is still needed to judge these choices with a person.
+
+This later Grok text/visual review completed successfully (gateway reported `grok-4.7-build`). It is distinct from the unsuccessful 24 October coding-worker attempt described above. Codex integrated the review, made the small HTML changes and performed the browser verification.
 
 ## Publication and development history
 

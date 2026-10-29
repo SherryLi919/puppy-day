@@ -1,5 +1,7 @@
 # Testing and user trial
 
+The 29 October AI simulation is recorded in [AI_FEEDBACK.md](AI_FEEDBACK.md). It does not fill the real-participant table below.
+
 ## Developer regression checklist
 
 Run the game in a fresh browser tab. These are expected results, not fabricated trial observations. The checks actually performed for this revision are in `CHECKS.md`.
@@ -10,6 +12,7 @@ Run the game in a fresh browser tab. These are expected results, not fabricated 
 | Enter a name such as `<b>Pup</b>` | The name appears as literal text, not HTML |
 | Start a new game | 09:00, 0/8 actions, Fullness/Mood/Energy/Cleanliness = 60/60/70/65 |
 | Feed once | Bowl and food appear, dog reacts; 10:00 and 82/56/70/57; one diary entry |
+| Read the care instructions and take two valid actions | The text distinguishes button effects from hourly costs; newest-first diary numbers are 2, then 1 |
 | Double-click an action rapidly | Only one action is accepted during the reaction |
 | Wait for the reaction | Buttons become usable and the puppy returns to idle |
 | Feed twice, waiting each time; try a third time | First two accepted; third rejected at Fullness 100; no time or diary change |

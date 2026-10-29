@@ -48,10 +48,10 @@
           <button type="button" data-action="clean"><span class="action-heading"><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16v2h2v6h-2v2H4v-2H2v-6h2zm2 3v4h12v-4zM6 3h4v4H6zm8 3h4v4h-4zm5-5h3v3h-3z" fill-rule="evenodd"/></svg><span>Clean</span></span><small>Cleanliness +35<br>Energy −10</small></button>
           <button type="button" data-action="rest"><span class="action-heading"><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h5v3h-3v3H9v7h3v3h7v-2h3v5h-5v2H9v-2H5v-4H3V9h2V5h4zM17 3h6v2h-2v2h-2v1h4v2h-7V8h2V6h2V5h-3z"/></svg><span>Rest</span></span><small>Energy +35<br>Mood +5</small></button>
         </div>
-        <p class="hint rules-note">Each hour also uses 8 Fullness, 4 Mood and 3 Cleanliness. All needs stay between 0 and 100.</p>
+        <p class="hint rules-note">Button values are before hourly costs. Each action also uses 8 Fullness, 4 Mood and 3 Cleanliness. The diary shows the final change. All needs stay between 0 and 100.</p>
       </section>
     </div>
-    <section class="panel journal"><h2>Dear puppy diary...</h2><p id="feedback" role="status" aria-live="polite" aria-atomic="true"></p><ol id="log"></ol></section>
+    <section class="panel journal"><h2>Dear puppy diary...</h2><p id="feedback" role="status" aria-live="polite" aria-atomic="true"></p><ol id="log" reversed></ol></section>
     <section id="summary" class="panel" hidden><h2>A day well spent.</h2><p id="result"></p><p>There is no single perfect routine. Which needs guided your choices today?</p></section>
     <div class="reset-row"><button type="button" id="reset" class="secondary">Start over</button><span>Refreshing starts a new day. Progress is not saved.</span></div>
   </section>

@@ -2,7 +2,7 @@
 
 ## Supplied prototype
 
-This revision starts from the user's supplied Puppy Day ZIP. The original files credit OpenAI Codex for the initial HTML/CSS/JavaScript and the brown 32×32 Canvas puppy. The original pixel dog, care rules and garden palette are retained and extended. No claim is made that a real user trial or public deployment has happened.
+This revision starts from the user's supplied Puppy Day ZIP. The original files credit OpenAI Codex for the initial HTML/CSS/JavaScript and the brown 32×32 Canvas puppy. The original pixel dog, care rules and garden palette are retained and extended. The later public deployment is recorded in `CHECKS.md`; a real user trial remains pending.
 
 ## This revision
 
@@ -11,6 +11,7 @@ This revision starts from the user's supplied Puppy Day ZIP. The original files 
 - Design review workflow: the locally installed `design-taste-frontend` skill (https://github.com/leonxlnx/taste-skill), applied to the existing project and checked with browser screenshots.
 - Pixel graphics: rectangles and paths in the project source. No third-party dog image, photograph, audio or icon package is used.
 - The student's own contributions and reflections remain to be recorded honestly in `PROCESS.md`.
+- AI-simulated usability review, 29 October 2026: independent Grok 4.7 / medium through Magpie (gateway reported `grok-4.7-build`), using supplied source and a screenshot. Codex performed the separate browser checks, integrated the feedback and added the explanatory hint and reversed diary numbering. See `AI_FEEDBACK.md`; this was not a human trial.
 
 ## Font
 

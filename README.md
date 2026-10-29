@@ -57,6 +57,7 @@ Each accepted action then costs 8 Fullness, 4 Mood and 3 Cleanliness, clamps all
 - `assets/fonts/`: the local font and its SIL Open Font License.
 - `tests/interaction.test.cjs`: focused logic/lifecycle checks, using Node's built-in test runner.
 - `PROCESS.md`: process notes and the still-pending real user trial.
+- `AI_FEEDBACK.md`: explicitly labelled AI simulation, browser observations and the resulting design decisions.
 - `CHECKS.md`: actual verification scope and limitations.
 - `TESTING.md`: manual trial and regression checklist.
 
@@ -73,10 +74,16 @@ No `npm install` is needed. Automated checks do not replace a trial with another
 
 ![Puppy Day: pixel font, English controls and a feeding reaction](assets/screenshot-feed.png)
 
-## Limits and submission
+## Current limitations
 
 No sound, saved progress, backend or real-time countdown. The game uses modern Canvas, dialog and JavaScript APIs. Pixelify Sans covers the English interface; user-entered characters outside its coverage use a system fallback.
+
+These are scope choices, not missing dependencies. AI-simulated usability feedback and browser checks were added on 29 October 2026; see [AI_FEEDBACK.md](AI_FEEDBACK.md). They do not replace the required trial with another person.
+
+## Submission work still to complete
 
 Repository: [SherryLi919/puppy-day](https://github.com/SherryLi919/puppy-day). [Play online through GitHub Pages](https://sherryli919.github.io/puppy-day/), served from the `main` branch root. A self-contained `Puppy-Day.html` is also included for convenient local use.
 
 For Assignment 3, complete a real user trial, record your observation and resulting decision in `PROCESS.md`, credit AI assistance, and commit your own changes as they happen. Submit the public repository URL through Canvas and check it while signed out. The deadline in the supplied brief is **1 November 2026, 23:59 Hong Kong time**.
+
+The working game, setup instructions, screenshot, credits, AI feedback and public live link are present. The real user trial, the student's own reflection and code explanation, and Canvas submission remain personal tasks; this repository does not claim they have been completed.
